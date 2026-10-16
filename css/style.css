@@ -1,0 +1,147 @@
+:root {
+  --page-bg: #f4f6f8;
+  --text: #252b31;
+  --accent: #347a63;
+  --border: #d7dde2;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--page-bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+
+.site-nav {
+  background: var(--accent);
+}
+
+.navbar-brand {
+  font-weight: 700;
+}
+
+.navbar-nav .nav-link.active {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.page-header {
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+  padding: 1.25rem 1.5rem;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--accent);
+}
+
+.page-header h1 {
+  margin-bottom: 0.75rem;
+  font-size: clamp(1.7rem, 4vw, 2.2rem);
+}
+
+.page-header p:last-child {
+  margin-bottom: 0;
+}
+
+.eyebrow {
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.task-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+  gap: 1rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.site-card {
+  padding: 1.25rem;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+.site-card h2 {
+  font-size: 1.25rem;
+}
+
+.task-link {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.task-link:hover {
+  border-color: var(--accent);
+}
+
+.task-link p,
+.site-card p:last-child {
+  margin-bottom: 0;
+}
+
+.form-card {
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.form-card .form-control,
+#contact-form input,
+#contact-form textarea {
+  border: 1px solid #aeb8c0;
+  border-radius: 4px;
+}
+
+.form-card .form-control:focus,
+#contact-form input:focus,
+#contact-form textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 0.2rem rgb(52 122 99 / 20%);
+}
+
+.site-button,
+#contact-form button {
+  padding: 0.5rem 1rem;
+  color: #fff;
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.site-button:hover,
+#contact-form button:hover {
+  background: #28634f;
+}
+
+#contact-form label {
+  font-weight: 600;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  font: inherit;
+}
+
+#contact-form textarea {
+  resize: vertical;
+}
+
+.form-success {
+  margin: 0.75rem 0 0;
+  color: #176447;
+}
+
+.site-footer {
+  margin-top: 2rem;
+  padding: 1rem;
+  color: #5c6670;
+  text-align: center;
+}

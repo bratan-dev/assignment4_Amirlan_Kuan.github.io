@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registration | Leafloop</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark site-nav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Leafloop</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="task0.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="task1.html">Form</a></li>
+          <li class="nav-item"><a class="nav-link" href="task2.html">B Form</a></li>
+          <li class="nav-item"><a class="nav-link" href="task3.html">Live</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="task4.html">Registration</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-5">
+    <header class="page-header">
+      <p class="eyebrow">REGISTRATION</p>
+      <h1>Create an account</h1>
+    </header>
+
+    <section class="site-card form-card">
+      <form id="registration-form" class="js-check-form" novalidate>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label" for="first-name">First Name</label>
+            <input class="form-control" id="first-name" name="first-name" type="text" required minlength="2" maxlength="40" pattern="[A-Za-z][A-Za-z ]*" data-required-message="First name is required" data-invalid-message="Use at least 2 letters and spaces.">
+            <div class="invalid-feedback">First name is required</div>
+            <div class="valid-feedback">Looks good!</div>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label" for="last-name">Last Name</label>
+            <input class="form-control" id="last-name" name="last-name" type="text" required minlength="2" maxlength="40" pattern="[A-Za-z][A-Za-z ]*" data-required-message="Last name is required" data-invalid-message="Use at least 2 letters and spaces.">
+            <div class="invalid-feedback">Last name is required</div>
+            <div class="valid-feedback">Looks good!</div>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label" for="registration-email">Email</label>
+            <input class="form-control" id="registration-email" name="email" type="email" required maxlength="100" data-required-message="Email is required" data-invalid-message="Enter a valid email address.">
+            <div class="invalid-feedback">Email is required</div>
+            <div class="valid-feedback">Looks good!</div>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label" for="password">Password</label>
+            <input class="form-control" id="password" name="password" type="password" required minlength="8" data-required-message="Password is required" data-invalid-message="Password must be at least 8 characters.">
+            <div class="invalid-feedback">Password is required</div>
+            <div class="valid-feedback">Looks good!</div>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label" for="confirm-password">Confirm Password</label>
+            <input class="form-control" id="confirm-password" name="confirm-password" type="password" required data-required-message="Please confirm your password" data-invalid-message="Passwords must match.">
+            <div class="invalid-feedback">Please confirm your password</div>
+            <div class="valid-feedback">Passwords match!</div>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label" for="country">Country</label>
+            <select class="form-select" id="country" name="country" required data-required-message="Please choose a country" data-invalid-message="Please choose a country.">
+              <option value="" selected disabled>Select your country</option>
+              <option value="kazakhstan">Kazakhstan</option>
+              <option value="united-states">United States</option>
+              <option value="united-kingdom">United Kingdom</option>
+              <option value="canada">Canada</option>
+              <option value="other">Other</option>
+            </select>
+            <div class="invalid-feedback">Please choose a country</div>
+            <div class="valid-feedback">Looks good!</div>
+          </div>
+          <fieldset class="col-md-6">
+            <legend class="form-label fs-6">Gender</legend>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" id="gender-female" name="gender" type="radio" value="female" required data-required-message="Please select a gender" data-invalid-message="Please select a gender.">
+              <label class="form-check-label" for="gender-female">Female</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" id="gender-male" name="gender" type="radio" value="male">
+              <label class="form-check-label" for="gender-male">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" id="gender-other" name="gender" type="radio" value="other">
+              <label class="form-check-label" for="gender-other">Other</label>
+            </div>
+            <div class="invalid-feedback">Please select a gender</div>
+            <div class="valid-feedback">Thanks for letting us know.</div>
+          </fieldset>
+          <fieldset class="col-md-6">
+            <legend class="form-label fs-6">Hobbies <span class="text-muted">(optional)</span></legend>
+            <div class="form-check">
+              <input class="form-check-input" id="hobby-reading" name="hobbies" type="checkbox" value="reading">
+              <label class="form-check-label" for="hobby-reading">Reading</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" id="hobby-sports" name="hobbies" type="checkbox" value="sports">
+              <label class="form-check-label" for="hobby-sports">Sports</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" id="hobby-music" name="hobbies" type="checkbox" value="music">
+              <label class="form-check-label" for="hobby-music">Music</label>
+            </div>
+          </fieldset>
+          <div class="col-12">
+            <button class="site-button" type="submit">Register</button>
+            <button class="btn btn-outline-secondary ms-2" type="reset">Reset</button>
+            <p class="form-success" id="registration-form-success" aria-live="polite"></p>
+          </div>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">Leafloop · Small steps in web development</footer>
+  <script src="js/validation.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
