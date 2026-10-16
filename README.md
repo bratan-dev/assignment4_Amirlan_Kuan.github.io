@@ -1,4 +1,4 @@
-# Web Practice Studio
+# Leafloop
 
 This small website contains examples of contact forms and form validation.
 
